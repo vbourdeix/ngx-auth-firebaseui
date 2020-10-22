@@ -1,6 +1,6 @@
 <p align="center">
-  <img height="256px" width="256px" style="text-align: center;" 
-  src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-auth-firebaseui@master/demo/src/assets/logo.svg">
+  <img height="256px" width="256px" style="text-align: center;"
+  src="https://cdn.jsdelivr.net/gh/anthonynahas/ngx-auth-firebaseui@master/assets/angular-material-extensions-logo.svg">
 </p>
 
 # ngx-auth-firebaseui - Open Source Library for Angular Web Apps to integrate a material user interface for firebase authentication.
@@ -24,10 +24,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/ngAnthonyy.svg?style=social&label=Follow)](https://twitter.com/ngAnthonyy)
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/gdi2290/awesome-angular)
 
-<p align="center">
-  <img alt="ngx-auth-firebaseui-logo.png" width="256px" style="text-align: center;" 
-  src="ngx-auth-firebaseui-logo.png">
-</p>
+
 
 Angular UI component for [firebase](https://firebase.google.com/docs/auth/web/firebaseui) authentication.
 This library is an angular module (including angular components and services) that allows to authenticate
@@ -42,14 +39,14 @@ If you prefer to develop with bootstrap rather than with material design, please
 Do you have `any` question or suggestion ? Please do not hesitate to contact us!
 Alternatively, provide a PR | open an appropriate issue [here](https://github.com/anthonynahas/ngx-auth-firebaseui/issues)
 
-If you like this project, support [ngx-auth-firebaseui](https://github.com/anthonynahas/ngx-auth-firebaseui) 
+If you like this project, support [ngx-auth-firebaseui](https://github.com/anthonynahas/ngx-auth-firebaseui)
 by starring :star: and sharing it :loudspeaker:
 
 ## Table of Contents
 - [ngx-auth-firebaseui vs firebaseui-web](#vs)
 - [Why to use ngx-auth-firebaseui ?](#why-to-use-ngx-auth-firebaseui)
 - [Library's components](#components)
-- [Supported Providers](#supported-procress-and-actions)
+- [Supported Providers](#supported-providers)
 - [Supported Processes and Actions](#supported-procress-and-actions)
 - [Requirements](#requirements)
 - [Demo](#demo)
@@ -75,12 +72,13 @@ by starring :star: and sharing it :loudspeaker:
 | Sign In                                        | :heavy_check_mark:    |  :heavy_check_mark:    |
 | Sign In Anonymously                            | :heavy_check_mark:    |  :heavy_check_mark:    |
 | Sign In with Google                            | :heavy_check_mark:    |  :heavy_check_mark:    |
+| Sign In with Apple                             | :heavy_check_mark:    |  :heavy_check_mark:    |
 | Sign In with Facebook                          | :heavy_check_mark:    |  :heavy_check_mark:    |
 | Sign In with Twitter                           | :heavy_check_mark:    |  :heavy_check_mark:    |
 | Sign In with Github                            | :heavy_check_mark:    |  :heavy_check_mark:    |
 | Sign In with Microsoft                         | :heavy_check_mark:    |  :heavy_check_mark:    |
 | Sign In with Yahoo                             | :heavy_check_mark:    |  :heavy_check_mark:    |
-| Sign In with Phone`number`                       | :x:                   |  :heavy_check_mark:    |
+| Sign In with Phone`number`                     | :x:                   |  :heavy_check_mark:    |
 | Sign out                                       | :heavy_check_mark:    |  :x:                   |
 | Sign in/up progress indicator                  | :heavy_check_mark:    |  :x:                   |
 | Password Strength indicator                    | :heavy_check_mark:    |  :x:                   |
@@ -122,7 +120,7 @@ by starring :star: and sharing it :loudspeaker:
 - :busts_in_silhouette: user profile component to display user's data using <ngx-auth-firebaseui-user></ngx-auth-firebaseui-user> via `ngx-auth-firebaseui-user`
 - :zap: update user profile as feature
 - :fire: [Sync user's authentication with FIRESTORE](FIRESTORE_SYNC.md) **AUTOMATICALLY**
-- :muscle: Forgot Password feature! Go and let your users to recover their passwords easily 
+- :muscle: Forgot Password feature! Go and let your users to recover their passwords easily
 - :tada: Supports SSR - Server Side Rendering
 - [support of i18n](https://ngx-auth-firebaseui.firebaseapp.com/i18n)
 
@@ -143,6 +141,7 @@ by starring :star: and sharing it :loudspeaker:
 - anonymously
 - email and password (traditional)
 - google
+- apple
 - facebook
 - twitter
 - github
@@ -155,14 +154,14 @@ by starring :star: and sharing it :loudspeaker:
 ## Supported Processes and Actions:
 - sign up
 - sign in
-- sign in Anonymously | with google, facebook, twitter, github, microsoft, yahoo
+- sign in Anonymously | with google, apple, facebook, twitter, github, microsoft, yahoo
 - sign out
 - validation of password's strength while creating a new account using [@angular-material-extensions/password-strength](https://github.com/AnthonyNahas/@angular-material-extensions/password-strength)
 - forgot/reset password
 - sending email verifications
 - delete user's account
 - edit user's profile like email, name, (profile picture :soon:) and phone `number`
-- firestore auto sync :fire:  
+- firestore auto sync :fire:
 - do not allow users to create new accounts before checking the terms of services and private policy - for mor info check this [here](https://ngx-auth-firebaseui.firebaseapp.com/examples/tos)
 
 ## Supported Angular Guards
@@ -173,14 +172,14 @@ by starring :star: and sharing it :loudspeaker:
 - [angular material theme](https://material.angular.io/guide/getting-started#step-4-include-a-theme)
 - [angular material icons](https://material.angular.io/guide/getting-started#step-6-optional-add-material-icons)
 
-- [angular cdk - v8.x](https://www.npmjs.com/package/@angular/cdk)
-- [angular material - v8.x](https://www.npmjs.com/package/@angular/material)
-- [angular forms - v8.x](https://www.npmjs.com/package/@angular/forms)
-- [angular animations - v8.x](https://www.npmjs.com/package/@angular/animations)
-- [angular router - v8.x](https://www.npmjs.com/package/@angular/router)
-- [angular flex-layout v8.0.0-beta.26](https://www.npmjs.com/package/@angular/flex-layout)
-- [@angular/fire - v5.2.x](https://www.npmjs.com/package/@angular/fire)
-- [firebase - v6.x](https://www.npmjs.com/package/firebase)
+- [angular cdk - v9.x](https://www.npmjs.com/package/@angular/cdk)
+- [angular material - v9.x](https://www.npmjs.com/package/@angular/material)
+- [angular forms - v9.x](https://www.npmjs.com/package/@angular/forms)
+- [angular animations - v9.x](https://www.npmjs.com/package/@angular/animations)
+- [angular router - v9.x](https://www.npmjs.com/package/@angular/router)
+- [angular flex-layout v9.0.0-beta.31](https://www.npmjs.com/package/@angular/flex-layout)
+- [@angular/fire - v6.x](https://www.npmjs.com/package/@angular/fire)
+- [firebase - v7.x](https://www.npmjs.com/package/firebase)
 
 the full tutorial guide can be found [here](https://ngx-auth-firebaseui.firebaseapp.com/getting-started)
 
@@ -189,7 +188,7 @@ the full tutorial guide can be found [here](https://ngx-auth-firebaseui.firebase
 
 ##  [Demo](https://ngx-auth-firebaseui.firebaseapp.com/) |  [Features](https://ngx-auth-firebaseui.firebaseapp.com/features) | [Examples](https://ngx-auth-firebaseui.firebaseapp.com/examples)
 
-take a look at live example with firestore's synchronization [here](FIRESTORE_SYNC.md) 
+take a look at live example with firestore's synchronization [here](FIRESTORE_SYNC.md)
 
 ---
 
@@ -202,42 +201,42 @@ take a look at live example with firestore's synchronization [here](FIRESTORE_SY
 v8
 
 <p align="center">
-  <img alt="ngx-auth-firebaseui sign in" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui sign in" width="384px" style="text-align: center;"
   src="assets/v3.0.0/demo.png">
 </p>
 
 in combination with `ngx-auth-firebaseui-user`
 
 <p align="center">
-  <img alt="ngx-auth-firebaseui sign in" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui sign in" width="384px" style="text-align: center;"
   src="assets/v3.0.0/demo_full.png">
 </p>
 
 v7
 
 <p align="center">
-  <img alt="ngx-auth-firebaseui sign in" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui sign in" width="384px" style="text-align: center;"
   src="assets/v1.0.0/png/signin.png">
 </p>
 
 - Sign up - registration
 
-#### before 
+#### before
 
 <p align="center">
-  <img alt="ngx-auth-firebaseui sign up" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui sign up" width="384px" style="text-align: center;"
   src="assets/v1.0.0/png/register_filled_2.png">
 </p>
 
-#### after 
+#### after
 <p align="center">
-  <img alt="ngx-auth-firebaseui sign up" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui sign up" width="384px" style="text-align: center;"
   src="assets/v3.4.0/email_verification.png">
 </p>
 
 #### demo outlook
 <p align="center">
-  <img alt="ngx-auth-firebaseui sign up" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui sign up" width="384px" style="text-align: center;"
   src="assets/v1.0.0/png/registration_full.png">
 </p>
 
@@ -245,10 +244,10 @@ v7
 ## Screenshots  <ngx-auth-firebaseui-provider></ngx-auth-firebaseui-providers>
 
 #### row layout
-Please note: when the view port is getting too small, the layout will be 
+Please note: when the view port is getting too small, the layout will be
 automatically change to `column`
 <p align="center">
-  <img alt="ngx-auth-firebaseui sign up" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui sign up" width="384px" style="text-align: center;"
   src="assets/v3.0.0/providers_column.png">
 </p>
 
@@ -257,14 +256,14 @@ automatically change to `column`
 
 #### when logged in
 <p align="center">
-  <img alt="ngx-auth-firebaseui user profile component" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui user profile component" width="384px" style="text-align: center;"
   src="assets/v1.0.0/png/user.png">
 </p>
 
 #### in edit mode
 
 <p align="center">
-  <img alt="ngx-auth-firebaseui edit user component" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui edit user component" width="384px" style="text-align: center;"
   src="assets/v1.0.0/png/user_edit_mode.png">
 </p>
 
@@ -274,14 +273,14 @@ automatically change to `column`
 - Before
 
 <p align="center">
-  <img alt="ngx-auth-firebaseui on mobile" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui on mobile" width="384px" style="text-align: center;"
   src="assets/v1.0.0/png/forgot_password0.png">
 </p>
 
 - After
 
 <p align="center">
-  <img alt="ngx-auth-firebaseui on mobile" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui on mobile" width="384px" style="text-align: center;"
   src="assets/v1.0.0/png/forgot_password_sent.png">
 </p>
 
@@ -289,7 +288,7 @@ automatically change to `column`
 ## Screenshot - [i18n - multiple languages](https://ngx-auth-firebaseui.firebaseapp.com/i18n)
 
 <p align="center">
-  <img alt="ngx-auth-firebaseui on mobile" width="384px" style="text-align: center;" 
+  <img alt="ngx-auth-firebaseui on mobile" width="384px" style="text-align: center;"
   src="assets/v2.7.0/2.gif">
 </p>
 
@@ -301,22 +300,22 @@ automatically change to `column`
 
 ```json
 "peerDependencies": {
-    "@angular/core": "^8.x",
-    "@angular/animations": "^8.x",
-    "@angular/cdk": "^8.x",
-    "@angular/flex-layout": "^8.0.0-beta.26",
-    "@angular/forms": "^8.x",
-    "@angular/material": "^8.x",
-    "@angular/fire": "5.2.x",
-    "firebase": "6.x",
+    "@angular/core": "^9.x",
+    "@angular/animations": "^9.x",
+    "@angular/cdk": "^9.x",
+    "@angular/flex-layout": "^9.0.0-beta.29",
+    "@angular/forms": "^9.x",
+    "@angular/material": "^9.x",
+    "@angular/fire": "5.4.x",
+    "firebase": "7.x",
   }
 ```
 
 #### NOTE:
-If you are still running angular v5, please consider to user `ngx-auth-firebaseui` v0.x
 
 v1.x should be used with angular v7 projects
 v3.x should be used with angular v8 projects
+v4.x should be used with angular v9 projects
 
 [help!](https://ngx-auth-firebaseui.firebaseapp.com/getting-started)
 
@@ -326,7 +325,7 @@ v3.x should be used with angular v8 projects
 <a name="dependencies"/>
 
 ## Dependencies
-* [Angular](https://angular.io) (*requires* Angular 2 or higher, developed with 8.x) - obviously
+* [Angular](https://angular.io) (*requires* Angular 2 or higher, developed with 9.x) - obviously
 * [@angular-material-extensions/password-strength](https://www.npmjs.com/package/@angular-material-extensions/password-strength)
 
 the [@angular-material-extensions/password-strength](https://www.npmjs.com/package/@angular-material-extensions/password-strength) is used
@@ -334,7 +333,7 @@ to indicate how secure is the provided password when registering a new firebase 
 
 <p align="center">
   <img width="384px" style="text-align: center;"
-   src="assets/v0.7.1/features/password/ngx-material-password-strength.gif">
+   src="assets/v0.7.1****/features/password/ngx-material-password-strength.gif">
 </p>
 
 <a name="installation"/>
@@ -354,7 +353,7 @@ ng add ngx-auth-firebaseui
 - :heavy_check_mark:  `ngx-auth-firebaseui` 's module will be automatically imported to the root module (just replace `PUT_YOUR_FIREBASE_API_KEY_HERE` with your firebase api key)
 - :heavy_check_mark: `ngx-auth-firebaseui` 's assets will be automatically added the `angular.json` file
 
-## 2. Install via *npm*. (Alternative) 
+## 2. Install via *npm*. (Alternative)
 
 Install above dependencies via *npm*.
 
@@ -372,7 +371,7 @@ Firebase deps
 npm i -s firebase @angular/fire
 ```
 
-` -> continue by following the instructions ` [here](https://github.com/anthonynahas/ngx-auth-firebaseui/tree/master/docs/INSTRUCTIONS.md) 
+` -> continue by following the instructions ` [here](https://github.com/anthonynahas/ngx-auth-firebaseui/tree/master/docs/INSTRUCTIONS.md)
 
 Once installed you need to import the main module:
 ```js
@@ -488,7 +487,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
                   nameMinLength: 2,
                   // If set, sign-in/up form is not available until email has been verified.
                   // Plus protected routes are still protected even though user is connected.
-                  guardProtectedRoutesUntilEmailIsVerified: true
+                  guardProtectedRoutesUntilEmailIsVerified: true,
+                  enableEmailVerification: true, // default: true
                 }),
   ],
   providers: [],
@@ -521,11 +521,11 @@ Once the library is imported, you can use its components, directives and pipes i
 ## API
 
 ### `<ngx-auth-firebaseui></ngx-auth-firebaseui>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui.md#api)
-### `<ngx-auth-firebaseui-providers></ngx-auth-firebaseui-login>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui-login.md#api)
-### `<ngx-auth-firebaseui-providers></ngx-auth-firebaseui-register>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui-register.md#api)
+### `<ngx-auth-firebaseui-login></ngx-auth-firebaseui-login>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui-login.md#api)
+### `<ngx-auth-firebaseui-register></ngx-auth-firebaseui-register>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui-register.md#api)
 ### `<ngx-auth-firebaseui-providers></ngx-auth-firebaseui-providers>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui-providers.md#api)
 ### `<ngx-auth-firebaseui-user></ngx-auth-firebaseui-user>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui-user.md#api)
-### `<ngx-auth-firebaseui-user></ngx-auth-firebaseui-avatar>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui-avatar.md#api)
+### `<ngx-auth-firebaseui-avatar></ngx-auth-firebaseui-avatar>` [see the api](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/docs/ngx-auth-firebaseui-avatar.md#api)
 
 
 ### EXTRA TIP: Login Authentication Guard
@@ -547,8 +547,8 @@ NgxAuthFirebaseUIModule.forRoot(firebaseKey, firebaseAppNameFactory,
     }),
 ```
 
-if the user is logged in, he will be redirected to `examples/logged-in` route (per example), 
-otherwise he will be redirected to the `examples/logged-out` route 
+if the user is logged in, he will be redirected to `examples/logged-in` route (per example),
+otherwise he will be redirected to the `examples/logged-out` route
 
 3. import the `LoggedInGuard` in your router module
 
@@ -588,13 +588,14 @@ export class AppRoutingModule {
 - [@angular-material-extensions/components](https://github.com/angular-material-extensions/components)
 - [@angular-material-extensions/password-strength](https://github.com/angular-material-extensions/password-strength)
 - [@angular-material-extensions/google-maps-autocomplete](https://github.com/angular-material-extensions/google-maps-autocomplete)
+- [@angular-material-extensions/fab-menu](https://github.com/angular-material-extensions/fab-menu)
+- [@angular-material-extensions/select-country](https://github.com/angular-material-extensions/select-country)
 - [@angular-material-extensions/pages](https://github.com/angular-material-extensions/pages)
 - [@angular-material-extensions/link-preview](https://github.com/angular-material-extensions/link-preview)
 - [@angular-material-extensions/contacts](https://github.com/angular-material-extensions/contacts)
 - [@angular-material-extensions/faq](https://github.com/angular-material-extensions/faq)
 - [@angular-material-extensions/jumbotron](https://github.com/angular-material-extensions/jumbotron)
 - [angular-material-extensions/freelancer-theme](https://github.com/angular-material-extensions/freelancer-theme)
-- [@angular-material-extensions/combination-generator](https://github.com/angular-material-extensions/combination-generator)
 
 ---
 
@@ -604,7 +605,7 @@ export class AppRoutingModule {
 + Drop an email to: [Anthony Nahas](mailto:anthony.na@hotmail.de)
 + or open an appropriate [issue](https://github.com/anthonynahas/ngx-auth-firebaseui/issues)
 + let us chat on [Gitter](https://gitter.im/ngx-auth-firebaseui/Lobby)
- 
+
  Built by and for developers :heart: we will help you :punch:
 
 ---
@@ -619,4 +620,4 @@ This project is supported by [jetbrains](https://www.jetbrains.com/) with 1 ALL 
 
 ## License
 
-Copyright (c) 2019 [Anthony Nahas](https://github.com/AnthonyNahas). Licensed under the MIT License (MIT)
+Copyright (c) 2019-2020 [Anthony Nahas](https://github.com/AnthonyNahas). Licensed under the MIT License (MIT)

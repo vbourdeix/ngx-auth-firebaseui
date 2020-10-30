@@ -1,5 +1,5 @@
 {
-  "name": "ngx-auth-firebaseui-demo",
+  "name": "ngx-auth-firebaseui",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

@@ -30,6 +30,7 @@ export class AuthProvidersComponent {
   @Input() theme: Theme; // theme: string = Theme.DEFAULT;
   @Input() layout: string = Layout.ROW;
   @Input() providers: AuthProvider[] | AuthProvider = AuthProvider.ALL; //  google, facebook, twitter, github, microsoft, yahoo
+  @Input() withRedirect: boolean;
 
   @Output() onSuccess: any;
   @Output() onError: any;
@@ -58,13 +59,13 @@ export class AuthProvidersComponent {
       this.dialogRef.afterClosed().subscribe((result: LegalityDialogResult) => {
         if (result && result.checked) {
           // this._afterSignUpMiddleware(result.authProvider).then(() => this.signUpFormGroup.reset());
-          this.authProcess.signInWith(authProvider);
+          this.authProcess.signInWith(authProvider, null, this.withRedirect);
         }
         this.dialogRef = null;
       });
     } else {
       // this._afterSignUpMiddleware(authProvider).then(() => this.signUpFormGroup.reset());
-      this.authProcess.signInWith(authProvider);
+      this.authProcess.signInWith(authProvider, null, this.withRedirect);
     }
   }
 

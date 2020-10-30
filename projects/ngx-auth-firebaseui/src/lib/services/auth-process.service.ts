@@ -100,9 +100,11 @@ export class AuthProcessService implements ISignInProcess, ISignUpProcess {
    * @param provider - the provider to authenticate with (google, facebook, twitter, github)
    * @param credentials optional email and password
    */
-  public async signInWith(provider: AuthProvider, credentials?: ICredentials) {
+  public async signInWith(provider: AuthProvider, credentials?: ICredentials, withRedirect = false) {
     try {
       let signInResult: UserCredential | any;
+
+      const socialSigninMethod = withRedirect ? this.afa.signInWithRedirect : this.afa.signInWithPopup;
 
       switch (provider) {
         case AuthProvider.ANONYMOUS:
@@ -114,31 +116,31 @@ export class AuthProcessService implements ISignInProcess, ISignUpProcess {
           break;
 
         case AuthProvider.Google:
-          signInResult = await this.afa.signInWithPopup(googleAuthProvider) as UserCredential;
+          signInResult = await socialSigninMethod(googleAuthProvider) as UserCredential;
           break;
 
         case AuthProvider.Apple:
-          signInResult = await this.afa.signInWithPopup(appleAuthProvider) as UserCredential;
+          signInResult = await socialSigninMethod(appleAuthProvider) as UserCredential;
           break;
 
         case AuthProvider.Facebook:
-          signInResult = await this.afa.signInWithPopup(facebookAuthProvider) as UserCredential;
+          signInResult = await socialSigninMethod(facebookAuthProvider) as UserCredential;
           break;
 
         case AuthProvider.Twitter:
-          signInResult = await this.afa.signInWithPopup(twitterAuthProvider) as UserCredential;
+          signInResult = await socialSigninMethod(twitterAuthProvider) as UserCredential;
           break;
 
         case AuthProvider.Github:
-          signInResult = await this.afa.signInWithPopup(githubAuthProvider) as UserCredential;
+          signInResult = await socialSigninMethod(githubAuthProvider) as UserCredential;
           break;
 
         case AuthProvider.Microsoft:
-          signInResult = await this.afa.signInWithPopup(microsoftAuthProvider) as UserCredential;
+          signInResult = await socialSigninMethod(microsoftAuthProvider) as UserCredential;
           break;
 
         case AuthProvider.Yahoo:
-          signInResult = await this.afa.signInWithPopup(yahooAuthProvider) as UserCredential;
+          signInResult = await socialSigninMethod(yahooAuthProvider) as UserCredential;
           break;
 
         case AuthProvider.PhoneNumber:

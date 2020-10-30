@@ -230,7 +230,7 @@
       }
     }
   },
-  "defaultProject": "ngx-auth-firebaseui-demo",
+  "defaultProject": "ngx-auth-firebaseui",
   "cli": {
     "analytics": "af28f968-6e85-4238-baee-375b2abdd684"
   }
